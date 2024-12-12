@@ -6,6 +6,8 @@ This project implements a **Genetic Algorithm (GA)** to extract key parameters o
 ## Features
 - Models solar cells as unbiased pn diodes under illumination using SDE and DDE.
 - Incorporates effects of parasitic resistances: **Series Resistance (Rs)** and **Shunt Resistance (Rsh)**.
+- ![image](https://github.com/user-attachments/assets/c467a146-85bd-48a9-851b-afe701e34592)
+
 - Employs **Genetic Algorithm** to optimize parameters:
   - **SDE:** Isc, Io, Rs, Rsh, η.
   - **DDE:** Isc, Io1, Io2, Rs, Rsh, η1, η2.
@@ -26,9 +28,8 @@ Parameters like Isc (short-circuit current), Io (reverse saturation current), an
 ### Fitness Function
 The GA minimizes the error between measured and calculated current values:
 
-\[
-f = \sqrt{\frac{1}{n} \sum_{j=0}^{n} \left(\frac{I_{j, \text{measured}} - I(V_j)}{I_{j, \text{measured}}}\right)^2}
-\]
+![image](https://github.com/user-attachments/assets/e2ad9b51-2303-41bd-af0f-d8c7b5518325)
+
 
 ### Implementation Details
 - Operating temperature: **300 K**.
@@ -38,21 +39,20 @@ f = \sqrt{\frac{1}{n} \sum_{j=0}^{n} \left(\frac{I_{j, \text{measured}} - I(V_j)
 
 ## Results
 
-### Application to Single Junction Solar Cells
-The GA was applied to GaInP, (In)GaAs, and Ge solar cells:
+The GA was applied to individual GaInP, (In)GaAs, and Ge solar cells:
 
 ### V-I Curve Validation
 The extracted parameters reproduce V-I characteristics closely matching the measured data:
 
 ![image](https://github.com/user-attachments/assets/48a110a6-87ee-4373-ba6b-02be1f447515)
+
 ![image](https://github.com/user-attachments/assets/1b0dc06d-5b00-48b3-87b2-ea030ab1c733)
 
-### Application to Single Junction Solar Cells
 The GA was applied to triple-junction solar cells stack:
 
 ![image](https://github.com/user-attachments/assets/84dd1137-8f81-4eca-bd56-d12ae0d3ee85)
-![image](https://github.com/user-attachments/assets/839a6b1b-e6a3-41f6-aab4-a73856e10aa6)
 
+![image](https://github.com/user-attachments/assets/839a6b1b-e6a3-41f6-aab4-a73856e10aa6)
 
 
 
